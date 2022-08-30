@@ -7,6 +7,7 @@ const DBQuery=require('../Query_Builder')
 //database
 var a;
 var b;
+var c;
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
