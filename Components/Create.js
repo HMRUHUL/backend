@@ -43,8 +43,9 @@ Create_Route.post("/process_post", async function (req, res, next) {
             console.log("hhh")
             return res.status(200).send({ status: 400, message: err.message });
         }
-
-        const query = `INSERT INTO DOCUMENTS(document_id, NAME) VALUES('${req.body.id}', '${req.body.name}')`
+         
+        console.log(req.body);
+        const query = `INSERT INTO DOCUMENTS(datentime, document_id, NAME) VALUES('${req.body.datentime}','${req.body.id}', '${req.body.name}')`
         const result=await DBQuery(query);
         const get_document_id_query="SELECT MAX(ID) as id from documents";
         const document_id_result=await DBQuery(get_document_id_query);
