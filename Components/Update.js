@@ -19,9 +19,6 @@ Update_Route.put("/update/:id", async function (req, res) {
         "success": true,
         "data": result
       })
-    
-
-
 })
 
 module.exports = Update_Route;
