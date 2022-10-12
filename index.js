@@ -9,6 +9,7 @@ const View_Route = require('./Components/View');
 const Create_Route = require('./Components/Create');
 const Delete_Route = require('./Components/Delete');
 const Update_Route = require('./Components/Update');
+const Createcat_Route = require('./Components/Createcat');
 const routes=express.Router({})
 oracledb.autoCommit = true;
 oracledb.outFormat = oracledb.OBJECT;
@@ -25,9 +26,7 @@ app.use('/documents', Create_Route);
 app.use("/documents",Delete_Route);
 app.use("/documents",Update_Route);
 
-
-
-
+app.use("/documents",Createcat_Route);
 
 app.listen(port, () => {
   console.log(`Example app listening on port' ${port}`)
