@@ -3,7 +3,7 @@ const Create_Route = express.Router();
 const mysql = require('mysql')
 const path = require("path")
 const multer = require("multer");
-const DBQuery=require('../Query_Builder')
+const DBQuery=require("../Database/Query_Builder")
 //database
 var a;
 var b;

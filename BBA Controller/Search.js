@@ -3,42 +3,8 @@ const Search_Route=express.Router();
 const mysql = require('mysql')
 const path=require("path")
 const multer = require("multer");
-const DBQuery=require('../Query_Builder')
-//database
-// const connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: '',
-//     database: 'bba'
-//   })
-  
-//   connection.connect()
+const DBQuery=require("../Database/Query_Builder")
 
-
-  
-
-  //get method search
-  // Search_Route.get("/search/:search", async function (req, res) {
-  //   const s = req.params;
-  //   console.log(s);
-  //   const query = `SELECT*FROM documents where name like '%${s.search}%' or record_id like '%${s.search}%' `;
-  
-  //   connection.query(query, (err, rows, fields) => {
-  //     if (err) throw err
-  //     //  return rows
-  //     else {
-  //       res.status(200).json({
-  
-  //         "success": true,
-  //         "data": rows
-  //       })
-  //       console.log(rows);
-  //     }
-  
-  //   })
-  
-  //   connection.end;
-  // })
 
   Search_Route.get("/search/:search", async function (req, res) {
     const s = req.params;

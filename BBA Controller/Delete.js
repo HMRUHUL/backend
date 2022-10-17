@@ -6,7 +6,7 @@ const multer = require("multer");
 const fs = require('fs');
 const { log } = require('console');
 //database
-const DBQuery = require('../Query_Builder')
+const DBQuery=require("../Database/Query_Builder")
 
 
 
